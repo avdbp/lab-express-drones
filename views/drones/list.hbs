@@ -1,1 +1,23 @@
-<h2>Available drones</h2>
+<h1>Drones Disponibles</h1>
+<div class="drones-list">
+  <table class="table" >
+    <tr class="tr" >
+      <th class="th">Nombre</th>
+      <th class="th">Número de Propelas</th>
+      <th class="th">Velocodad Máxima(m/s)</th>
+    </tr>
+    {{#each drones}}
+    <tr class="tr" >
+      <td class="td" >{{droneName}}</td>
+      <td class="td">{{propellers}}</td>
+      <td class="td">{{maxSpeed}}</td>
+      <td class="th"><a href="/drones/{{_id}}/edit"><button class="bt-edit">Editar</button></a></td>
+      <td><form action="/drones/{{_id}}/delete" method="POST">
+  <input type="image" <img class="trash" src="../../images/basura.png" alt="">
+</form></td>
+
+
+    </tr>
+    {{/each}}
+  </table>
+</div>
